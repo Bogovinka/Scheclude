@@ -1,0 +1,41 @@
+CREATE TABLE Items(
+id int identity(0, 1) primary key not null,
+Name_Item varchar(255) not null);
+
+CREATE TABLE Schedule_pn(
+id int identity(0, 1) primary key not null,
+id_Item int foreign key references Items(id));
+
+CREATE TABLE Schedule_vt(
+id int identity(0, 1) primary key not null,
+id_Item int foreign key references Items(id));
+
+CREATE TABLE Schedule_sr(
+id int identity(0, 1) primary key not null,
+id_Item int foreign key references Items(id));
+
+CREATE TABLE Schedule_ch(
+id int identity(0, 1) primary key not null,
+id_Item int foreign key references Items(id));
+
+CREATE TABLE Schedule_pt(
+id int identity(0, 1) primary key not null,
+id_Item int foreign key references Items(id));
+
+CREATE TABLE Schedule_sb(
+id int identity(0, 1) primary key not null,
+id_Item int foreign key references Items(id));
+
+CREATE TABLE Schedule_vs(
+id int identity(0, 1) primary key not null,
+id_Item int foreign key references Items(id));
+
+CREATE TABLE Logins(
+id int identity(0,1) primary key not null,
+Login varchar(255),
+Password varchar(255),
+Permis int);
+
+INSERT INTO Logins(Login, Password, Permis) VALUES ('User', 'User123', 0), ('Tester', 'Tester123', 0), ('Admin', 'Admin123', 1);
+
+INSERT INTO Items(Name_Item) VALUES ('Matematica'), ('Informatika'), ('Fizika'), ('Ruskiy'), ('Geografia'), ('History');

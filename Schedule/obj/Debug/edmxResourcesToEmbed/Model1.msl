@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище Database1ModelContainer" CdmEntityContainer="Database1Entities">
+    <EntitySetMapping Name="Items">
+      <EntityTypeMapping TypeName="Database1Model.Items">
+        <MappingFragment StoreEntitySet="Items">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name_Item" ColumnName="Name_Item" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logins">
+      <EntityTypeMapping TypeName="Database1Model.Logins">
+        <MappingFragment StoreEntitySet="Logins">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Permis" ColumnName="Permis" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schedule_ch">
+      <EntityTypeMapping TypeName="Database1Model.Schedule_ch">
+        <MappingFragment StoreEntitySet="Schedule_ch">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_Item" ColumnName="id_Item" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schedule_pn">
+      <EntityTypeMapping TypeName="Database1Model.Schedule_pn">
+        <MappingFragment StoreEntitySet="Schedule_pn">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_Item" ColumnName="id_Item" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schedule_pt">
+      <EntityTypeMapping TypeName="Database1Model.Schedule_pt">
+        <MappingFragment StoreEntitySet="Schedule_pt">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_Item" ColumnName="id_Item" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schedule_sb">
+      <EntityTypeMapping TypeName="Database1Model.Schedule_sb">
+        <MappingFragment StoreEntitySet="Schedule_sb">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_Item" ColumnName="id_Item" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schedule_sr">
+      <EntityTypeMapping TypeName="Database1Model.Schedule_sr">
+        <MappingFragment StoreEntitySet="Schedule_sr">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_Item" ColumnName="id_Item" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schedule_vs">
+      <EntityTypeMapping TypeName="Database1Model.Schedule_vs">
+        <MappingFragment StoreEntitySet="Schedule_vs">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_Item" ColumnName="id_Item" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schedule_vt">
+      <EntityTypeMapping TypeName="Database1Model.Schedule_vt">
+        <MappingFragment StoreEntitySet="Schedule_vt">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_Item" ColumnName="id_Item" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

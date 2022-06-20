@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1899bcaf82904aa5beb7d8aa84df4f4f" Name="Diagram1">
+        <EntityTypeShape EntityType="Database1Model.Items" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Logins" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Schedule_ch" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Schedule_pn" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Schedule_pt" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Schedule_sb" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Schedule_sr" Width="1.5" PointX="3" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Schedule_vs" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Schedule_vt" Width="1.5" PointX="3" PointY="15.625" IsExpanded="true" />
+        <AssociationConnector Association="Database1Model.FK__Schedule___id_It__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.FK__Schedule___id_It__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.FK__Schedule___id_It__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.FK__Schedule___id_It__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.FK__Schedule___id_It__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.FK__Schedule___id_It__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.FK__Schedule___id_It__49C3F6B7" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

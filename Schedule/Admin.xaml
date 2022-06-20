@@ -1,0 +1,80 @@
+﻿<Window x:Class="Schedule.Admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Schedule"
+        mc:Ignorable="d"
+        Title="Admin" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="62*"/>
+            <RowDefinition Height="43*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="62*"/>
+            <ColumnDefinition Width="37*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="items" Click="items_Click" VerticalAlignment="Top" HorizontalAlignment="Left">Добавить предметы</Button>
+        <StackPanel  x:Name="pn_StackPanel" HorizontalAlignment="Center" Grid.Column="1">
+            <Label FontSize="24" Width="250" HorizontalContentAlignment="Center">Понедельник</Label>
+            <ComboBox x:Name="comboBox_u1pn" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u2pn" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u3pn" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u4pn" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u5pn" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+        </StackPanel>
+        <StackPanel x:Name="vt_StackPanel"  Visibility="Hidden" HorizontalAlignment="Center" Grid.Column="1" >
+            <Label FontSize="24" Width="250" HorizontalContentAlignment="Center">Вторник</Label>
+            <ComboBox x:Name="comboBox_u1vt" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u2vt" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u3vt" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u4vt" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u5vt" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+        </StackPanel>
+        <StackPanel x:Name="sr_StackPanel" Visibility="Hidden" HorizontalAlignment="Center" Grid.Column="1">
+            <Label FontSize="24" Width="250" HorizontalContentAlignment="Center">Среда</Label>
+            <ComboBox x:Name="comboBox_u1sr" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u2sr" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u3sr" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u4sr" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u5sr" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+        </StackPanel>
+        <StackPanel x:Name="cht_StackPanel" Visibility="Hidden" HorizontalAlignment="Center" Grid.Column="1">
+            <Label FontSize="24" Width="250" HorizontalContentAlignment="Center">Четверг</Label>
+            <ComboBox x:Name="comboBox_u1cht" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u2cht" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u3cht" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u4cht" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u5cht" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+        </StackPanel>
+        <StackPanel x:Name="pt_StackPanel" Visibility="Hidden" HorizontalAlignment="Center" Grid.Column="1" >
+            <Label FontSize="24" Width="250" HorizontalContentAlignment="Center">Пятница</Label>
+            <ComboBox x:Name="comboBox_u1pt" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u2pt" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u3pt" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u4pt" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u5pt" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+        </StackPanel>
+        <StackPanel x:Name="sb_StackPanel" Visibility="Hidden" HorizontalAlignment="Center" Grid.Column="1" >
+            <Label FontSize="24" Width="250" HorizontalContentAlignment="Center">Суббота</Label>
+            <ComboBox x:Name="comboBox_u1sb" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u2sb" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u3sb" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u4sb" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u5sb" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+        </StackPanel>
+        <StackPanel x:Name="vs_StackPanel" Visibility="Hidden" HorizontalAlignment="Center" Grid.Column="1" >
+            <Label FontSize="24" Width="250" HorizontalContentAlignment="Center">Воскресенье</Label>
+            <ComboBox x:Name="comboBox_u1vs" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u2vs" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u3vs" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u4vs" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+            <ComboBox x:Name="comboBox_u5vs" Loaded="comboBox_u_Loaded" Margin="0,10,0,0" DisplayMemberPath="Name_Item"></ComboBox>
+        </StackPanel>
+        <Button x:Name="add"  VerticalAlignment="Bottom" Grid.Column="1" Width="50" HorizontalAlignment="Left" Grid.Row="0" Click="add_Click">Назад</Button>
+        <Button x:Name="back"  VerticalAlignment="Bottom" Grid.Column="1" Width="50"  HorizontalAlignment="Right" Grid.Row="0" Click="back_Click">Вперед</Button>
+        <Button x:Name="save"  VerticalAlignment="Bottom" Grid.Column="1" Width="100" HorizontalAlignment="Center" Grid.Row="0" Click="save_Click">Сохранить</Button>
+    </Grid>
+</Window>

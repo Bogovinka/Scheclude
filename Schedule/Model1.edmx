@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище Database1Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Items">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name_Item" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Logins">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="varchar" MaxLength="255" />
+          <Property Name="Password" Type="varchar" MaxLength="255" />
+          <Property Name="Permis" Type="int" />
+        </EntityType>
+        <EntityType Name="Schedule_ch">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_Item" Type="int" />
+        </EntityType>
+        <EntityType Name="Schedule_pn">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_Item" Type="int" />
+        </EntityType>
+        <EntityType Name="Schedule_pt">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_Item" Type="int" />
+        </EntityType>
+        <EntityType Name="Schedule_sb">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_Item" Type="int" />
+        </EntityType>
+        <EntityType Name="Schedule_sr">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_Item" Type="int" />
+        </EntityType>
+        <EntityType Name="Schedule_vs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_Item" Type="int" />
+        </EntityType>
+        <EntityType Name="Schedule_vt">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_Item" Type="int" />
+        </EntityType>
+        <Association Name="FK__Schedule___id_It__38996AB5">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="Schedule_pn" Type="Self.Schedule_pn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Schedule_pn">
+              <PropertyRef Name="id_Item" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Schedule___id_It__3B75D760">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="Schedule_vt" Type="Self.Schedule_vt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Schedule_vt">
+              <PropertyRef Name="id_Item" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Schedule___id_It__3E52440B">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="Schedule_sr" Type="Self.Schedule_sr" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Schedule_sr">
+              <PropertyRef Name="id_Item" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Schedule___id_It__412EB0B6">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="Schedule_ch" Type="Self.Schedule_ch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Schedule_ch">
+              <PropertyRef Name="id_Item" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Schedule___id_It__440B1D61">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="Schedule_pt" Type="Self.Schedule_pt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Schedule_pt">
+              <PropertyRef Name="id_Item" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Schedule___id_It__46E78A0C">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="Schedule_sb" Type="Self.Schedule_sb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Schedule_sb">
+              <PropertyRef Name="id_Item" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Schedule___id_It__49C3F6B7">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="Schedule_vs" Type="Self.Schedule_vs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Schedule_vs">
+              <PropertyRef Name="id_Item" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище Database1ModelContainer">
+          <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Logins" EntityType="Self.Logins" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Schedule_ch" EntityType="Self.Schedule_ch" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Schedule_pn" EntityType="Self.Schedule_pn" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Schedule_pt" EntityType="Self.Schedule_pt" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Schedule_sb" EntityType="Self.Schedule_sb" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Schedule_sr" EntityType="Self.Schedule_sr" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Schedule_vs" EntityType="Self.Schedule_vs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Schedule_vt" EntityType="Self.Schedule_vt" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Schedule___id_It__38996AB5" Association="Self.FK__Schedule___id_It__38996AB5">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="Schedule_pn" EntitySet="Schedule_pn" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Schedule___id_It__3B75D760" Association="Self.FK__Schedule___id_It__3B75D760">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="Schedule_vt" EntitySet="Schedule_vt" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Schedule___id_It__3E52440B" Association="Self.FK__Schedule___id_It__3E52440B">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="Schedule_sr" EntitySet="Schedule_sr" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Schedule___id_It__412EB0B6" Association="Self.FK__Schedule___id_It__412EB0B6">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="Schedule_ch" EntitySet="Schedule_ch" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Schedule___id_It__440B1D61" Association="Self.FK__Schedule___id_It__440B1D61">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="Schedule_pt" EntitySet="Schedule_pt" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Schedule___id_It__46E78A0C" Association="Self.FK__Schedule___id_It__46E78A0C">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="Schedule_sb" EntitySet="Schedule_sb" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Schedule___id_It__49C3F6B7" Association="Self.FK__Schedule___id_It__49C3F6B7">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="Schedule_vs" EntitySet="Schedule_vs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Items">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name_Item" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Schedule_pn" Relationship="Self.FK__Schedule___id_It__38996AB5" FromRole="Items" ToRole="Schedule_pn" />
+          <NavigationProperty Name="Schedule_vt" Relationship="Self.FK__Schedule___id_It__3B75D760" FromRole="Items" ToRole="Schedule_vt" />
+          <NavigationProperty Name="Schedule_sr" Relationship="Self.FK__Schedule___id_It__3E52440B" FromRole="Items" ToRole="Schedule_sr" />
+          <NavigationProperty Name="Schedule_ch" Relationship="Self.FK__Schedule___id_It__412EB0B6" FromRole="Items" ToRole="Schedule_ch" />
+          <NavigationProperty Name="Schedule_pt" Relationship="Self.FK__Schedule___id_It__440B1D61" FromRole="Items" ToRole="Schedule_pt" />
+          <NavigationProperty Name="Schedule_sb" Relationship="Self.FK__Schedule___id_It__46E78A0C" FromRole="Items" ToRole="Schedule_sb" />
+          <NavigationProperty Name="Schedule_vs" Relationship="Self.FK__Schedule___id_It__49C3F6B7" FromRole="Items" ToRole="Schedule_vs" />
+        </EntityType>
+        <EntityType Name="Logins">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Permis" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Schedule_ch">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_Item" Type="Int32" />
+          <NavigationProperty Name="Items" Relationship="Self.FK__Schedule___id_It__412EB0B6" FromRole="Schedule_ch" ToRole="Items" />
+        </EntityType>
+        <EntityType Name="Schedule_pn">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_Item" Type="Int32" />
+          <NavigationProperty Name="Items" Relationship="Self.FK__Schedule___id_It__38996AB5" FromRole="Schedule_pn" ToRole="Items" />
+        </EntityType>
+        <EntityType Name="Schedule_pt">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_Item" Type="Int32" />
+          <NavigationProperty Name="Items" Relationship="Self.FK__Schedule___id_It__440B1D61" FromRole="Schedule_pt" ToRole="Items" />
+        </EntityType>
+        <EntityType Name="Schedule_sb">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_Item" Type="Int32" />
+          <NavigationProperty Name="Items" Relationship="Self.FK__Schedule___id_It__46E78A0C" FromRole="Schedule_sb" ToRole="Items" />
+        </EntityType>
+        <EntityType Name="Schedule_sr">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_Item" Type="Int32" />
+          <NavigationProperty Name="Items" Relationship="Self.FK__Schedule___id_It__3E52440B" FromRole="Schedule_sr" ToRole="Items" />
+        </EntityType>
+        <EntityType Name="Schedule_vs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_Item" Type="Int32" />
+          <NavigationProperty Name="Items" Relationship="Self.FK__Schedule___id_It__49C3F6B7" FromRole="Schedule_vs" ToRole="Items" />
+        </EntityType>
+        <EntityType Name="Schedule_vt">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_Item" Type="Int32" />
+          <NavigationProperty Name="Items" Relationship="Self.FK__Schedule___id_It__3B75D760" FromRole="Schedule_vt" ToRole="Items" />
+        </EntityType>
+        <Association Name="FK__Schedule___id_It__38996AB5">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="Schedule_pn" Type="Self.Schedule_pn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Schedule_pn">
+              <PropertyRef Name="id_Item" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Schedule___id_It__3B75D760">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="Schedule_vt" Type="Self.Schedule_vt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Schedule_vt">
+              <PropertyRef Name="id_Item" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Schedule___id_It__3E52440B">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="Schedule_sr" Type="Self.Schedule_sr" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Schedule_sr">
+              <PropertyRef Name="id_Item" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Schedule___id_It__412EB0B6">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="Schedule_ch" Type="Self.Schedule_ch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Schedule_ch">
+              <PropertyRef Name="id_Item" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Schedule___id_It__440B1D61">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="Schedule_pt" Type="Self.Schedule_pt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Schedule_pt">
+              <PropertyRef Name="id_Item" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Schedule___id_It__46E78A0C">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="Schedule_sb" Type="Self.Schedule_sb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Schedule_sb">
+              <PropertyRef Name="id_Item" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Schedule___id_It__49C3F6B7">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="Schedule_vs" Type="Self.Schedule_vs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Schedule_vs">
+              <PropertyRef Name="id_Item" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Items" EntityType="Self.Items" />
+          <EntitySet Name="Logins" EntityType="Self.Logins" />
+          <EntitySet Name="Schedule_ch" EntityType="Self.Schedule_ch" />
+          <EntitySet Name="Schedule_pn" EntityType="Self.Schedule_pn" />
+          <EntitySet Name="Schedule_pt" EntityType="Self.Schedule_pt" />
+          <EntitySet Name="Schedule_sb" EntityType="Self.Schedule_sb" />
+          <EntitySet Name="Schedule_sr" EntityType="Self.Schedule_sr" />
+          <EntitySet Name="Schedule_vs" EntityType="Self.Schedule_vs" />
+          <EntitySet Name="Schedule_vt" EntityType="Self.Schedule_vt" />
+          <AssociationSet Name="FK__Schedule___id_It__38996AB5" Association="Self.FK__Schedule___id_It__38996AB5">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="Schedule_pn" EntitySet="Schedule_pn" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Schedule___id_It__3B75D760" Association="Self.FK__Schedule___id_It__3B75D760">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="Schedule_vt" EntitySet="Schedule_vt" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Schedule___id_It__3E52440B" Association="Self.FK__Schedule___id_It__3E52440B">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="Schedule_sr" EntitySet="Schedule_sr" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Schedule___id_It__412EB0B6" Association="Self.FK__Schedule___id_It__412EB0B6">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="Schedule_ch" EntitySet="Schedule_ch" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Schedule___id_It__440B1D61" Association="Self.FK__Schedule___id_It__440B1D61">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="Schedule_pt" EntitySet="Schedule_pt" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Schedule___id_It__46E78A0C" Association="Self.FK__Schedule___id_It__46E78A0C">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="Schedule_sb" EntitySet="Schedule_sb" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Schedule___id_It__49C3F6B7" Association="Self.FK__Schedule___id_It__49C3F6B7">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="Schedule_vs" EntitySet="Schedule_vs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище Database1ModelContainer" CdmEntityContainer="Database1Entities">
+          <EntitySetMapping Name="Items">
+            <EntityTypeMapping TypeName="Database1Model.Items">
+              <MappingFragment StoreEntitySet="Items">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Name_Item" ColumnName="Name_Item" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logins">
+            <EntityTypeMapping TypeName="Database1Model.Logins">
+              <MappingFragment StoreEntitySet="Logins">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Permis" ColumnName="Permis" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Schedule_ch">
+            <EntityTypeMapping TypeName="Database1Model.Schedule_ch">
+              <MappingFragment StoreEntitySet="Schedule_ch">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_Item" ColumnName="id_Item" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Schedule_pn">
+            <EntityTypeMapping TypeName="Database1Model.Schedule_pn">
+              <MappingFragment StoreEntitySet="Schedule_pn">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_Item" ColumnName="id_Item" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Schedule_pt">
+            <EntityTypeMapping TypeName="Database1Model.Schedule_pt">
+              <MappingFragment StoreEntitySet="Schedule_pt">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_Item" ColumnName="id_Item" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Schedule_sb">
+            <EntityTypeMapping TypeName="Database1Model.Schedule_sb">
+              <MappingFragment StoreEntitySet="Schedule_sb">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_Item" ColumnName="id_Item" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Schedule_sr">
+            <EntityTypeMapping TypeName="Database1Model.Schedule_sr">
+              <MappingFragment StoreEntitySet="Schedule_sr">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_Item" ColumnName="id_Item" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Schedule_vs">
+            <EntityTypeMapping TypeName="Database1Model.Schedule_vs">
+              <MappingFragment StoreEntitySet="Schedule_vs">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_Item" ColumnName="id_Item" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Schedule_vt">
+            <EntityTypeMapping TypeName="Database1Model.Schedule_vt">
+              <MappingFragment StoreEntitySet="Schedule_vt">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_Item" ColumnName="id_Item" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
