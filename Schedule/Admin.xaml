@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Schedule"
         mc:Ignorable="d"
-        Title="Admin" Height="450" Width="800">
+        Title="Admin" Height="450" Width="800" WindowStartupLocation="CenterScreen" MinHeight="450" MinWidth="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="62*"/>
@@ -16,6 +16,7 @@
             <ColumnDefinition Width="62*"/>
             <ColumnDefinition Width="37*"/>
         </Grid.ColumnDefinitions>
+        <Button x:Name="exit" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="24" Click="exit_Click">Выйти</Button>
         <Button x:Name="items" Click="items_Click" VerticalAlignment="Top" HorizontalAlignment="Left">Добавить предметы</Button>
         <StackPanel  x:Name="pn_StackPanel" HorizontalAlignment="Center" Grid.Column="1">
             <Label FontSize="24" Width="250" HorizontalContentAlignment="Center">Понедельник</Label>

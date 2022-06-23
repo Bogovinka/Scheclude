@@ -3,32 +3,32 @@ id int identity(0, 1) primary key not null,
 Name_Item varchar(255) not null);
 
 CREATE TABLE Schedule_pn(
-id int identity(0, 1) primary key not null,
-id_Item int foreign key references Items(id));
+id int primary key not null,
+Item_Name varchar(255));
 
 CREATE TABLE Schedule_vt(
-id int identity(0, 1) primary key not null,
-id_Item int foreign key references Items(id));
+id int primary key not null,
+Item_Name varchar(255));
 
 CREATE TABLE Schedule_sr(
-id int identity(0, 1) primary key not null,
-id_Item int foreign key references Items(id));
+id int primary key not null,
+Item_Name varchar(255));
 
 CREATE TABLE Schedule_ch(
-id int identity(0, 1) primary key not null,
-id_Item int foreign key references Items(id));
+id int primary key not null,
+Item_Name varchar(255));
 
 CREATE TABLE Schedule_pt(
-id int identity(0, 1) primary key not null,
-id_Item int foreign key references Items(id));
+id int primary key not null,
+Item_Name varchar(255));
 
 CREATE TABLE Schedule_sb(
-id int identity(0, 1) primary key not null,
-id_Item int foreign key references Items(id));
+id int primary key not null,
+Item_Name varchar(255));
 
 CREATE TABLE Schedule_vs(
-id int identity(0, 1) primary key not null,
-id_Item int foreign key references Items(id));
+id int primary key not null,
+Item_Name varchar(255));
 
 CREATE TABLE Logins(
 id int identity(0,1) primary key not null,
@@ -39,3 +39,17 @@ Permis int);
 INSERT INTO Logins(Login, Password, Permis) VALUES ('User', 'User123', 0), ('Tester', 'Tester123', 0), ('Admin', 'Admin123', 1);
 
 INSERT INTO Items(Name_Item) VALUES ('Matematica'), ('Informatika'), ('Fizika'), ('Ruskiy'), ('Geografia'), ('History');
+
+INSERT INTO Schedule_pn(id) VALUES (1), (2), (3), (4), (5);
+
+INSERT INTO Schedule_vt(id) VALUES (1), (2), (3), (4), (5);
+
+INSERT INTO Schedule_sr(id) VALUES (1), (2), (3), (4), (5);
+
+INSERT INTO Schedule_ch(id) VALUES (1), (2), (3), (4), (5);
+
+INSERT INTO Schedule_pt(id) VALUES (1), (2), (3), (4), (5);
+
+INSERT INTO Schedule_sb(id) VALUES (1), (2), (3), (4), (5);
+
+INSERT INTO Schedule_vs(id) VALUES (1), (2), (3), (4), (5);

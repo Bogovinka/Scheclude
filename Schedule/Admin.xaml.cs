@@ -140,24 +140,125 @@ namespace Schedule
 
         private void save_Click(object sender, RoutedEventArgs e)
         {
-
+            SchecludeCreatePn(comboBox_u1pn.Text, comboBox_u2pn.Text, comboBox_u3pn.Text, comboBox_u4pn.Text, comboBox_u5pn.Text);
+            SchecludeCreateVt(comboBox_u1vt.Text, comboBox_u2vt.Text, comboBox_u3vt.Text, comboBox_u4vt.Text, comboBox_u5vt.Text);
+            SchecludeCreateSr(comboBox_u1sr.Text, comboBox_u2sr.Text, comboBox_u3sr.Text, comboBox_u4sr.Text, comboBox_u5sr.Text);
+            SchecludeCreateCht(comboBox_u1cht.Text, comboBox_u2cht.Text, comboBox_u3cht.Text, comboBox_u4cht.Text, comboBox_u5cht.Text);
+            SchecludeCreatePt(comboBox_u1pt.Text, comboBox_u2pt.Text, comboBox_u3pt.Text, comboBox_u4pt.Text, comboBox_u5pt.Text);
+            SchecludeCreateSb(comboBox_u1sb.Text, comboBox_u2sb.Text, comboBox_u3sb.Text, comboBox_u4sb.Text, comboBox_u5sb.Text);
+            SchecludeCreateVs(comboBox_u1vs.Text, comboBox_u2vs.Text, comboBox_u3vs.Text, comboBox_u4vs.Text, comboBox_u5vs.Text);
         }
-        public void SchecludeCreatePn()
+        public void SchecludeCreatePn(string i1, string i2, string i3, string i4, string i5)
         {
-            AddItem aI = new AddItem();
-            aI.ShowDialog();
-            if (aI.DialogResult == true)
+            ScheduleContext context = new ScheduleContext();
+            object[] str = { i1, i2, i3, i4, i5 };
+            for (int i = 1; i <= 5; i++)
             {
-                // Создать нового покупателя
-                Items item = new Items
-                {
-                    Name_Item = $"{aI.addItemsText.Text}"
-                };
-                db.Item.Add(item);
-
-                // Сохранить изменения в базе данных
-                db.SaveChanges();
+                var customer = context.Pn
+                    // Загрузить покупателя с фамилией "Иванов"
+                    .Where(c => c.id == i)
+                    .FirstOrDefault();
+                customer.Item_Name = str[i - 1].ToString();
+                // Сохранить изменения
+                context.SaveChanges();
             }
+        }
+        public void SchecludeCreateVt(string i1, string i2, string i3, string i4, string i5)
+        {
+            ScheduleContext context = new ScheduleContext();
+            object[] str = { i1, i2, i3, i4, i5 };
+            for (int i = 1; i <= 5; i++)
+            {
+                var customer = context.Vt
+                    // Загрузить покупателя с фамилией "Иванов"
+                    .Where(c => c.id == i)
+                    .FirstOrDefault();
+                customer.Item_Name = str[i - 1].ToString();
+                // Сохранить изменения
+                context.SaveChanges();
+            }
+        }
+        public void SchecludeCreateSr(string i1, string i2, string i3, string i4, string i5)
+        {
+            ScheduleContext context = new ScheduleContext();
+            object[] str = { i1, i2, i3, i4, i5 };
+            for (int i = 1; i <= 5; i++)
+            {
+                var customer = context.Sr
+                    // Загрузить покупателя с фамилией "Иванов"
+                    .Where(c => c.id == i)
+                    .FirstOrDefault();
+                customer.Item_Name = str[i - 1].ToString();
+                // Сохранить изменения
+                context.SaveChanges();
+            }
+        }
+        public void SchecludeCreateCht(string i1, string i2, string i3, string i4, string i5)
+        {
+            ScheduleContext context = new ScheduleContext();
+            object[] str = { i1, i2, i3, i4, i5 };
+            for (int i = 1; i <= 5; i++)
+            {
+                var customer = context.Cht
+                    // Загрузить покупателя с фамилией "Иванов"
+                    .Where(c => c.id == i)
+                    .FirstOrDefault();
+                customer.Item_Name = str[i - 1].ToString();
+                // Сохранить изменения
+                context.SaveChanges();
+            }
+        }
+        public void SchecludeCreatePt(string i1, string i2, string i3, string i4, string i5)
+        {
+            ScheduleContext context = new ScheduleContext();
+            object[] str = { i1, i2, i3, i4, i5 };
+            for (int i = 1; i <= 5; i++)
+            {
+                var customer = context.Pt
+                    // Загрузить покупателя с фамилией "Иванов"
+                    .Where(c => c.id == i)
+                    .FirstOrDefault();
+                customer.Item_Name = str[i - 1].ToString();
+                // Сохранить изменения
+                context.SaveChanges();
+            }
+        }
+        public void SchecludeCreateSb(string i1, string i2, string i3, string i4, string i5)
+        {
+            ScheduleContext context = new ScheduleContext();
+            object[] str = { i1, i2, i3, i4, i5 };
+            for (int i = 1; i <= 5; i++)
+            {
+                var customer = context.Sb
+                    // Загрузить покупателя с фамилией "Иванов"
+                    .Where(c => c.id == i)
+                    .FirstOrDefault();
+                customer.Item_Name = str[i - 1].ToString();
+                // Сохранить изменения
+                context.SaveChanges();
+            }
+        }
+        public void SchecludeCreateVs(string i1, string i2, string i3, string i4, string i5)
+        {
+            ScheduleContext context = new ScheduleContext();
+            object[] str = { i1, i2, i3, i4, i5 };
+            for (int i = 1; i <= 5; i++)
+            {
+                var customer = context.Vs
+                    // Загрузить покупателя с фамилией "Иванов"
+                    .Where(c => c.id == i)
+                    .FirstOrDefault();
+                customer.Item_Name = str[i - 1].ToString();
+                // Сохранить изменения
+                context.SaveChanges();
+            }
+        }
+
+        private void exit_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mw = new MainWindow();
+            mw.Show();
+            Close();
         }
     }
 }

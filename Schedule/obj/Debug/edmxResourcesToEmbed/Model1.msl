@@ -23,7 +23,7 @@
       <EntityTypeMapping TypeName="Database1Model.Schedule_ch">
         <MappingFragment StoreEntitySet="Schedule_ch">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="id_Item" ColumnName="id_Item" />
+          <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -31,7 +31,7 @@
       <EntityTypeMapping TypeName="Database1Model.Schedule_pn">
         <MappingFragment StoreEntitySet="Schedule_pn">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="id_Item" ColumnName="id_Item" />
+          <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -39,7 +39,7 @@
       <EntityTypeMapping TypeName="Database1Model.Schedule_pt">
         <MappingFragment StoreEntitySet="Schedule_pt">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="id_Item" ColumnName="id_Item" />
+          <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -47,7 +47,7 @@
       <EntityTypeMapping TypeName="Database1Model.Schedule_sb">
         <MappingFragment StoreEntitySet="Schedule_sb">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="id_Item" ColumnName="id_Item" />
+          <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -55,7 +55,7 @@
       <EntityTypeMapping TypeName="Database1Model.Schedule_sr">
         <MappingFragment StoreEntitySet="Schedule_sr">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="id_Item" ColumnName="id_Item" />
+          <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -63,7 +63,7 @@
       <EntityTypeMapping TypeName="Database1Model.Schedule_vs">
         <MappingFragment StoreEntitySet="Schedule_vs">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="id_Item" ColumnName="id_Item" />
+          <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -71,7 +71,7 @@
       <EntityTypeMapping TypeName="Database1Model.Schedule_vt">
         <MappingFragment StoreEntitySet="Schedule_vt">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="id_Item" ColumnName="id_Item" />
+          <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

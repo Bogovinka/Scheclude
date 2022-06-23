@@ -5,8 +5,79 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Schedule"
         mc:Ignorable="d"
-        Title="Menu" Height="450" Width="800">
+        Title="Menu" Height="450" Width="800" WindowStartupLocation="CenterScreen" MinWidth="800" MinHeight="450">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="374*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="exit"  HorizontalAlignment="Right" FontSize="24" Click="exit_Click">Выйти</Button>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32">Расписание</Label>
+        <ScrollViewer Grid.Row="1">
+            <StackPanel>
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <StackPanel Margin="0,0,0,0">
+                        <Label FontSize="24" HorizontalContentAlignment="Center" Width="200">Понедельник</Label>
+                        <DataGrid x:Name="itemsPn" AutoGenerateColumns="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Binding="{Binding Item_Name}" Header="Предмет" Width="200"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                    <StackPanel Margin="20,0,0,0">
+                        <Label FontSize="24" HorizontalContentAlignment="Center" Width="200">Вторник</Label>
+                        <DataGrid x:Name="itemsVt" AutoGenerateColumns="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Binding="{Binding Item_Name}" Header="Предмет" Width="200"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                    <StackPanel Margin="20,0,0,0">
+                        <Label FontSize="24" HorizontalContentAlignment="Center" Width="200">Среда</Label>
+                        <DataGrid x:Name="itemsSr" AutoGenerateColumns="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Binding="{Binding Item_Name}" Header="Предмет" Width="200"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <StackPanel Margin="0,0,0,0">
+                        <Label FontSize="24" HorizontalContentAlignment="Center" Width="200">Четверг</Label>
+                        <DataGrid x:Name="itemsCht" AutoGenerateColumns="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Binding="{Binding Item_Name}" Header="Предмет" Width="200"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                    <StackPanel Margin="20,0,0,0">
+                        <Label FontSize="24" HorizontalContentAlignment="Center" Width="200">Пятница</Label>
+                        <DataGrid x:Name="itemsPt" AutoGenerateColumns="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Binding="{Binding Item_Name}" Header="Предмет" Width="200"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                    <StackPanel Margin="20,0,0,0">
+                        <Label FontSize="24" HorizontalContentAlignment="Center" Width="200">Суббота</Label>
+                        <DataGrid x:Name="itemsSb" AutoGenerateColumns="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Binding="{Binding Item_Name}" Header="Предмет" Width="200"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <StackPanel Margin="0,0,0,0">
+                        <Label FontSize="24" HorizontalContentAlignment="Center" Width="200">Воскресенье</Label>
+                        <DataGrid x:Name="itemsVs" AutoGenerateColumns="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Binding="{Binding Item_Name}" Header="Предмет" Width="200"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Window>

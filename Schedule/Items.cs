@@ -14,34 +14,7 @@ namespace Schedule
     
     public partial class Items
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Items()
-        {
-            this.Schedule_pn = new HashSet<Schedule_pn>();
-            this.Schedule_vt = new HashSet<Schedule_vt>();
-            this.Schedule_sr = new HashSet<Schedule_sr>();
-            this.Schedule_ch = new HashSet<Schedule_ch>();
-            this.Schedule_pt = new HashSet<Schedule_pt>();
-            this.Schedule_sb = new HashSet<Schedule_sb>();
-            this.Schedule_vs = new HashSet<Schedule_vs>();
-        }
-    
         public int id { get; set; }
         public string Name_Item { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Schedule_pn> Schedule_pn { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Schedule_vt> Schedule_vt { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Schedule_sr> Schedule_sr { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Schedule_ch> Schedule_ch { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Schedule_pt> Schedule_pt { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Schedule_sb> Schedule_sb { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Schedule_vs> Schedule_vs { get; set; }
     }
 }

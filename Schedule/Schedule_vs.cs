@@ -15,8 +15,6 @@ namespace Schedule
     public partial class Schedule_vs
     {
         public int id { get; set; }
-        public Nullable<int> id_Item { get; set; }
-    
-        public virtual Items Items { get; set; }
+        public string Item_Name { get; set; }
     }
 }

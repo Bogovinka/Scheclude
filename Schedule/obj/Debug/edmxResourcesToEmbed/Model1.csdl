@@ -6,13 +6,6 @@
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name_Item" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Schedule_pn" Relationship="Self.FK__Schedule___id_It__38996AB5" FromRole="Items" ToRole="Schedule_pn" />
-    <NavigationProperty Name="Schedule_vt" Relationship="Self.FK__Schedule___id_It__3B75D760" FromRole="Items" ToRole="Schedule_vt" />
-    <NavigationProperty Name="Schedule_sr" Relationship="Self.FK__Schedule___id_It__3E52440B" FromRole="Items" ToRole="Schedule_sr" />
-    <NavigationProperty Name="Schedule_ch" Relationship="Self.FK__Schedule___id_It__412EB0B6" FromRole="Items" ToRole="Schedule_ch" />
-    <NavigationProperty Name="Schedule_pt" Relationship="Self.FK__Schedule___id_It__440B1D61" FromRole="Items" ToRole="Schedule_pt" />
-    <NavigationProperty Name="Schedule_sb" Relationship="Self.FK__Schedule___id_It__46E78A0C" FromRole="Items" ToRole="Schedule_sb" />
-    <NavigationProperty Name="Schedule_vs" Relationship="Self.FK__Schedule___id_It__49C3F6B7" FromRole="Items" ToRole="Schedule_vs" />
   </EntityType>
   <EntityType Name="Logins">
     <Key>
@@ -27,142 +20,51 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="id_Item" Type="Int32" />
-    <NavigationProperty Name="Items" Relationship="Self.FK__Schedule___id_It__412EB0B6" FromRole="Schedule_ch" ToRole="Items" />
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Item_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Schedule_pn">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="id_Item" Type="Int32" />
-    <NavigationProperty Name="Items" Relationship="Self.FK__Schedule___id_It__38996AB5" FromRole="Schedule_pn" ToRole="Items" />
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Item_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Schedule_pt">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="id_Item" Type="Int32" />
-    <NavigationProperty Name="Items" Relationship="Self.FK__Schedule___id_It__440B1D61" FromRole="Schedule_pt" ToRole="Items" />
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Item_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Schedule_sb">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="id_Item" Type="Int32" />
-    <NavigationProperty Name="Items" Relationship="Self.FK__Schedule___id_It__46E78A0C" FromRole="Schedule_sb" ToRole="Items" />
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Item_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Schedule_sr">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="id_Item" Type="Int32" />
-    <NavigationProperty Name="Items" Relationship="Self.FK__Schedule___id_It__3E52440B" FromRole="Schedule_sr" ToRole="Items" />
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Item_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Schedule_vs">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="id_Item" Type="Int32" />
-    <NavigationProperty Name="Items" Relationship="Self.FK__Schedule___id_It__49C3F6B7" FromRole="Schedule_vs" ToRole="Items" />
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Item_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Schedule_vt">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="id_Item" Type="Int32" />
-    <NavigationProperty Name="Items" Relationship="Self.FK__Schedule___id_It__3B75D760" FromRole="Schedule_vt" ToRole="Items" />
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Item_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
   </EntityType>
-  <Association Name="FK__Schedule___id_It__38996AB5">
-    <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
-    <End Role="Schedule_pn" Type="Self.Schedule_pn" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Items">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Schedule_pn">
-        <PropertyRef Name="id_Item" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Schedule___id_It__3B75D760">
-    <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
-    <End Role="Schedule_vt" Type="Self.Schedule_vt" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Items">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Schedule_vt">
-        <PropertyRef Name="id_Item" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Schedule___id_It__3E52440B">
-    <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
-    <End Role="Schedule_sr" Type="Self.Schedule_sr" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Items">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Schedule_sr">
-        <PropertyRef Name="id_Item" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Schedule___id_It__412EB0B6">
-    <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
-    <End Role="Schedule_ch" Type="Self.Schedule_ch" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Items">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Schedule_ch">
-        <PropertyRef Name="id_Item" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Schedule___id_It__440B1D61">
-    <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
-    <End Role="Schedule_pt" Type="Self.Schedule_pt" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Items">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Schedule_pt">
-        <PropertyRef Name="id_Item" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Schedule___id_It__46E78A0C">
-    <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
-    <End Role="Schedule_sb" Type="Self.Schedule_sb" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Items">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Schedule_sb">
-        <PropertyRef Name="id_Item" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Schedule___id_It__49C3F6B7">
-    <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
-    <End Role="Schedule_vs" Type="Self.Schedule_vs" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Items">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Schedule_vs">
-        <PropertyRef Name="id_Item" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Items" EntityType="Self.Items" />
     <EntitySet Name="Logins" EntityType="Self.Logins" />
@@ -173,33 +75,5 @@
     <EntitySet Name="Schedule_sr" EntityType="Self.Schedule_sr" />
     <EntitySet Name="Schedule_vs" EntityType="Self.Schedule_vs" />
     <EntitySet Name="Schedule_vt" EntityType="Self.Schedule_vt" />
-    <AssociationSet Name="FK__Schedule___id_It__38996AB5" Association="Self.FK__Schedule___id_It__38996AB5">
-      <End Role="Items" EntitySet="Items" />
-      <End Role="Schedule_pn" EntitySet="Schedule_pn" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Schedule___id_It__3B75D760" Association="Self.FK__Schedule___id_It__3B75D760">
-      <End Role="Items" EntitySet="Items" />
-      <End Role="Schedule_vt" EntitySet="Schedule_vt" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Schedule___id_It__3E52440B" Association="Self.FK__Schedule___id_It__3E52440B">
-      <End Role="Items" EntitySet="Items" />
-      <End Role="Schedule_sr" EntitySet="Schedule_sr" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Schedule___id_It__412EB0B6" Association="Self.FK__Schedule___id_It__412EB0B6">
-      <End Role="Items" EntitySet="Items" />
-      <End Role="Schedule_ch" EntitySet="Schedule_ch" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Schedule___id_It__440B1D61" Association="Self.FK__Schedule___id_It__440B1D61">
-      <End Role="Items" EntitySet="Items" />
-      <End Role="Schedule_pt" EntitySet="Schedule_pt" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Schedule___id_It__46E78A0C" Association="Self.FK__Schedule___id_It__46E78A0C">
-      <End Role="Items" EntitySet="Items" />
-      <End Role="Schedule_sb" EntitySet="Schedule_sb" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Schedule___id_It__49C3F6B7" Association="Self.FK__Schedule___id_It__49C3F6B7">
-      <End Role="Items" EntitySet="Items" />
-      <End Role="Schedule_vs" EntitySet="Schedule_vs" />
-    </AssociationSet>
   </EntityContainer>
 </Schema>

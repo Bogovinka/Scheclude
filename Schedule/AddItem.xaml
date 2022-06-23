@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Schedule"
         mc:Ignorable="d"
-        Title="AddItem" Height="200" Width="250">
+        Title="AddItem" Height="200" Width="250" WindowStartupLocation="CenterScreen">
     <Grid>
         <TextBox x:Name="addItemsText" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200"></TextBox>
-        <Button x:Name="ok" Click="ok_Click" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="50">Cancel</Button>
-        <Button x:Name="cancel" Click="cancel_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="50">OK</Button>
+        <Button x:Name="ok" Click="ok_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="50">OK</Button>
+        <Button x:Name="cancel" Click="cancel_Click" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="50">Cancel</Button>
     </Grid>
 </Window>
